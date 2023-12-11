@@ -44,8 +44,9 @@ BASE_URL=url
 <br />
 
 ### Running the Tests
-To execute the tests there are two ways: <br />
-- using Cypress UI (Launchpad / Test Runner)
+
+### Running Tests in Headed Mode
+
 ```bash
 npx cypress open
 ```
@@ -53,24 +54,18 @@ or
 ```bash
 npm run cy:open
 ```
+These commands will open the Cypress Test Runner UI, from which you can select and run individual test files or all tests.
 Choose `E2E Testing` in the Launchpad window.
 
 <br />
 
-- using command line
-```bash
-npm run cy:run
-```
-This will open the Cypress Test Runner UI, from which you can select and run individual test files or all tests.
-
-<br />
-
 ### Running Tests in Headless Mode
-To run tests in headless mode (in the terminal), use the following command:
+To run tests in headless mode (in the terminal), use the following commands.<br>
+This command runs all tests in the terminal without the graphical interface. The `Chrome` is set as the default browser.
 ```bash
 npm run cy:run
 ```
-This command runs all tests in the terminal without the graphical interface. The `Chrome` is set as the default browser. 
+ 
 If you want to change the browser, do it in `package.json` file under `scripts` or you can use the following command, 
 where you can add more parameters like `--headed` (execution with UI), `--browser firefox` etc. 
 ```bash
